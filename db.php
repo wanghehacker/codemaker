@@ -1,7 +1,7 @@
 <?php
 
 /*
- * mysql鏁版嵁搴撹闂被
+ * mysql数据库访问类
  */
 
 class MySQL {
@@ -20,11 +20,11 @@ class MySQL {
     var $databaseLink;                // Database Connection Link
 
     function __construct() {
-        $this->database = 'beilianoa';
+        $this->database = 'titandata';
         $this->username = 'root';
-        $this->password = 'root';
-        $this->hostname = '114.251.131.121';
-//        $this->hostname = 'localhost';
+        $this->password = '888888';
+//         $this->hostname = '114.251.131.121';
+       $this->hostname = 'localhost';
 
         $this->Connect();
     }
@@ -158,7 +158,7 @@ class MySQL {
             return 0;
         }
 
-        $query = "SELECT {$cols} FROM `{$from}` WHERE ";
+        $query = "SELECT {$cols} FROM {$from} WHERE ";
 
 //        $query = 'select * from template where id in (`1389852300324`,`1389852300148`,`1389852308112`)';
         if (is_array($where) && $where != '') {
