@@ -7,6 +7,7 @@
 </head>
 <body>
 <?php 
+	error_reporting(E_ALL ^ E_DEPRECATED);
 	require 'db.php';
 	$dbhelper = new MySQL();
 // 	输出文件路径

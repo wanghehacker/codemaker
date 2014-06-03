@@ -1,7 +1,7 @@
 %%%------------------------------------------------
 %%%	File    : table_to_record.erl	
 %%%	Author  : whe	
-%%%	Created :	2014-06-03 09:33:14	
+%%%	Created :	2014-06-03 15:29:31	
 Description: 从mysql表生成的record			
 Warning:  由程序自动生成，请不要随意修改！			
 %%%------------------------------------------------
@@ -31,7 +31,6 @@ Warning:  由程序自动生成，请不要随意修改！
       forza_limit=0,          %%%力量需求，0为不限
       wit_limit=0,            %%%智力需求，0为不限
       agile_limit=0,          %%%敏捷需求，0为不限
-      realm=0,                %%%阵营限制，0为不限
       vitality=0,             %%%体力
       spirit=0,               %%%灵力
       hp=0,                   %%%气血
@@ -46,54 +45,16 @@ Warning:  由程序自动生成，请不要随意修改！
       crit=0,                 %%%暴击
       ten=0,                  %%%坚韧
       speed=0,                %%%速度
-      attrition=0             %%%耐久度，0为永不磨损
+      max_overlap=0,          %%%可叠加数，0为不可叠加
+      color=0,                %%%物品颜色，0 白色，1 绿色，2 蓝色，3 紫色，4 橙色
+      expire_time=0           %%%有效期，0为不限，单位为秒
 }).
 
-%%%	角色基本信息
-%%%	player==>player
--record(player,{
-      id=,                    %%%用户ID
-      accid=0,                %%%平台账号ID
-      accname="",             %%%平台账号
-      nickname="",            %%%玩家名
-      status=0,               %%%玩家状态（0正常 1禁止)
-      reg_time=0,             %%%注册时间
-      last_login_time=0,      %%%最后登陆时间
-      last_login_ip="",       %%%最后登陆IP
-      sex=1,                  %%%性别 1男 2女
-      career=0,               %%%职业 1，2，3，4（分别是玄武--战士、白虎--刺客、青龙--法师、朱雀--牧师）
-      prestige=0,             %%%声望
-      spirit=0,               %%%灵力
-      jobs=0,                 %%%职位
-      gold=0,                 %%%元宝
-      cash=0,                 %%%礼金
-      coin=0,                 %%%铜钱
-      bcoin=0,                %%%绑定的铜钱
-      lv=1,                   %%%等级
-      exp=0,                  %%%经验
-      hp=0,                   %%%气血
-      hp_lim=0,               %%%气血上限
-      forza=0.00,             %%%力量
-      agile=0.00,             %%%敏捷
-      wit=0.00,               %%%智力
-      att=0,                  %%%攻击
-      def=0,                  %%%防御
-      hit=0,                  %%%命中率
-      dodge=0,                %%%躲避
-      crit=0,                 %%%暴击
-      ten=0,                  %%%坚韧
-      title="",               %%%称号
-      cell_num=100,           %%%背包格子数
-      online_flag=0,          %%%在线标记，0不在线 1在线
-      pet_upgrade_que_num=0,  %%%宠物升级队列个数
-      other=                  %%%其他附加数据集
-}).
-
-%%%	测试用表
+%%%	
 %%%	test==>test
 -record(test,{
-      id=,                    %%%
-      content="hello",        %%%
-      code=0                  %%%
+      id=,                    %%%Ҡۅ
+      row="",                 %%%
+      r=                      %%%
 }).
 
