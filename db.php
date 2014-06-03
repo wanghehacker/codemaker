@@ -88,7 +88,8 @@ class MySQL {
     // Executes MySQL query
     function ExecuteSQL($query) {
         $this->lastQuery = $query;
-        if ($this->result = mysql_query($query, $this->databaseLink)) {
+        if ($this->result = mysql_query($query, $this->databaseLink)) 
+        {
             $this->records = @mysql_num_rows($this->result);
             $this->affected = @mysql_affected_rows($this->databaseLink);
 
